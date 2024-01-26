@@ -1,0 +1,151 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-transform: capitalize;
+}
+body{
+    margin: 0px;
+    background-color: #eee;
+    font-family: 'Lemon', serif;
+}
+button{
+    text-transform: capitalize;
+}
+:root{
+    --primaryColor: #f44336;
+    --secondColor : #18ba89;
+    --thirdColor : #27303f;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 50px ;
+    background-color: #eee;
+}
+.guess-game{
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .game-area{ /*the nesting selector*/
+        text-align: center;
+        .inputs{
+           > div{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span{
+                font-size: 23px;
+                margin-right: 15px;
+            }
+           } 
+           .disabled{
+                opacity: .5;
+                pointer-events: none;  /* to make the element disabled to modify*/
+           }
+        }
+    }
+    .key-colors{
+        .key-color{
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: white;
+            margin-bottom: 10px ;
+
+            .key{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+
+                &.in-place{
+                    background-color: var(--primaryColor);
+                }
+                &.not-in-place{
+                    background-color: var(--secondColor);
+                }
+                &.no{
+                    background-color: var(--thirdColor);
+                }
+                .key-text{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+footer{
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+}
+input{
+    text-transform: capitalize;
+    width: 40px !important;
+    margin: 3px !important;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 5px;
+    text-align: center;
+    font-size: 30px;
+    caret-color: var(--secondColor);    /*the pointer that write > | */
+    border-bottom: 3px solid black;
+    &:focus{    /*to make effects in the same teg*/
+        box-shadow: 1px 1px 4px var(--primaryColor);
+        outline: none;
+    }
+    &.y-in-place{
+        background-color: var(--primaryColor);
+        color: white;
+    }
+    &.y-not-in-place{
+        background-color: var(--secondColor);
+        color: white;
+    }
+    &.y-no{
+        background-color: var(--thirdColor);
+        color: #eee;
+    }
+}
+
+.check:disabled .hint:disabled{
+    background-color: #27303f !important;
+    color: aliceblue !important;
+}
+.check{
+    background-color: var(--primaryColor) !important;
+}
+.hint{
+    background-color: var(--secondColor) !important;
+}
+.check:active , .hint:active{
+    scale: .95;
+    opacity: .75;
+}
+.winner{
+    color: #f44336;
+    font-size: 50px;
+}
+.loser{
+    color: var(--thirdColor);
+    font-size: 50px;
+}
+.again{
+    display: none;
+    align-items: center;
+    
+}

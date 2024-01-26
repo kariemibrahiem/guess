@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="guess.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1></h1>
+    <div class="guess-game">
+        <div class="game-area">
+            <div class="inputs"></div>
+            <div class="control">
+                <button class="check btn btn-danger w-75">check word</button>
+                <button class="hint btn btn-success"><span></span>hint</button>
+                <button class="again btn btn-danger w-100 m-5"><span> </span> play again</button>
+            </div>
+            <div class="message"></div>
+        </div>
+        <div class="key-colors">
+            <h2>key color</h2>
+            <div class="key-color">
+                <div class="key in-place"></div>
+                <div class="key-text">letter is right and in place</div>
+            </div>
+            <div class="key-color">
+                <div class="key not-in-place"></div>
+                <div class="key-text">letter is correct but not in place</div>
+            </div>
+            <div class="key-color">
+                <div class="key no"></div>
+                <div class="key-text">letter is not correct</div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- <footer></footer> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/cdnjs.cloudflare.com_ajax_libs_popper.js_1.11.0_umd_popper.min.js"></script>
+    <script src="/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="guess.js"></script>
+</body>
+</html>
